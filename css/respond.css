@@ -9,7 +9,7 @@
 
 @media screen and (max-width:980px){
     /* 1. 제거하기 */
-    .main-menu,
+    /* .main-menu, */
     .header-right{
         display:none;
     }
@@ -18,11 +18,54 @@
         display:none;
     }
 
+    nav{
+        background:rgba(0,0,0,0.7);
+        position:fixed;
+        width:100vw;
+        height:100vh;
+        top:0;
+        left:-250vw;
+        z-index:10000;
+    }
+
+    .main-menu{
+        display:block;
+        width:70%;
+        max-width:640px;
+        min-width:320px;
+        height:100%;
+        text-indent: 20px;
+        background: pink;
+        }
+
+    .main-menu::before{
+        display:none;
+    }
+
+    .main-menu:hover .depth1{
+        height:auto;
+    }
+
+    .depth1{
+        position:static;
+        height:auto;
+        transform:translateX(0);
+        text-indent:40px;
+        display:none;
+    }
+
+    .main-menu>li:hover .depth1{
+        display:block;
+    }
+
+
     /* 2. 보이기 */
+
     /* 3. 100% 만들기 */
     .header-left{
         top:50%;
         transform: translateY(-50%);
+
     }
         /* main-silder */
     .main-slider>div .text-box{
@@ -177,6 +220,10 @@
         width:100%;
     }
 
+    .make-your .text-box .silder-title{
+        font-size:4rem;
+    }
+
     .make-your .text-box .lets-btn{
         padding:1rem 3rem;
         font-size:1.6rem;
@@ -211,3 +258,4 @@
     .sns-list>li{
         felx:1;
     }
+}
